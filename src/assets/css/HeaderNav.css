@@ -1,0 +1,26 @@
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content:left;
+    gap: 3em;
+    background: linear-gradient(90deg, rgba(10, 11, 1, 1) 46%, rgba(153, 161, 74, 1) 92%);
+    min-height: 5em ;
+    color:aliceblue
+}
+
+.header__link{
+    margin: 0.8em;
+    color: aliceblue;
+    text-decoration: none;
+}
+.header__main{
+    display: flex;
+    margin-top: 1em;
+
+}
+.header__logo{
+    width: 10%;
+    height: auto;
+}

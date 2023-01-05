@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import { AppWrapper } from './context/context';
+import HeaderNav from './components/HeaderNav';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import './assets/css/reset.css';
 
 function App() {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper>  
+      <div className="App">
+          <HeaderNav/>
+          <Routes>
+          <Route exact path="/" element={<h1>COSA GORDA</h1>}>
+          </Route>
+            <Route exact path="/marvel" element={<h1>COSA GORDA de marvel</h1>}>  
+            </Route>
+
+            <Route path="/dc" element={<h1>COSA Gruesa de DC</h1>}>
+            </Route>
+            <Route path="/create" element={<h1>COSA fina</h1>}>
+            </Route>
+        </Routes>
+      </div>
+    </AppWrapper>
   );
 }
 
