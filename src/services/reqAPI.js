@@ -1,28 +1,26 @@
 import axios from "axios";
-import { useAppContext } from "../context/context"
 
-
-const { url } = useAppContext()
 class reqAPI{
     
     static async getAll() {
-        return await axios.get(url);
+        const resp= await axios.get(process.env.REACT_APP_BASE_URL);
+        return resp.data
     }
 
-    static async postHero(data) {
-        const body= JSON.stringify(data)
-        return await axios.post(url, body)
+    // static async postHero(data) {
+    //     const body= JSON.stringify(data)
+    //     return await axios.post(process.env.REACT_APP_BASE_URL, body)
 
-    }
+    // }
 
-    static async patchHero({id, ...data}){
-        const body= JSON.stringify(data)
-        return await axios.patch(`${url}${id}`, body)
-    }
+    // static async patchHero({id, ...data}){
+    //     const body= JSON.stringify(data)
+    //     return await axios.patch(`${process.env.REACT_APP_BASE_URL}${id}`, body)
+    // }
 
-    static async delHero({id}){
-        return await axios.delete(`${url}${id}`)
-        }
-    }
+    // static async delHero({id}){
+    //     return await axios.delete(`${process.env.REACT_APP_BASE_URL}${id}`)
+    //     }
+}
 
 export default reqAPI
