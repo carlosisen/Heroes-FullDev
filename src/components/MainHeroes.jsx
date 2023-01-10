@@ -1,5 +1,6 @@
 import { useAppContext } from "../context/context";
 import IndividualHero from "./IndividualHero";
+import "../assets/css/MainHeroes.css"
 
 const MainHeroes= ({group})=> {
     const {allHeroes}= useAppContext()
@@ -15,10 +16,10 @@ if (!allHeroes){
     )
 }
     return(
-        <>
+        <div className="MainHeroes">
         {filteredHeroes.map( hero => 
             <IndividualHero id={hero.id} key={hero.id}/>)}
-        </>
+        </div>
     )
 }
 

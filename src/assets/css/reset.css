@@ -1,6 +1,5 @@
 @charset "UTF-8"; /*->  codificas en utf-8 que hace que todos los caracteres del documento se interpreten correctamente independientemente del idioma o el sistema en el que se visualice.*/
 
-/* Aquí definimos las Custom properties */
 :root {
     --negro: #393939;
     /* Tipografía */
@@ -165,14 +164,13 @@ body {
     font-size: 100%;
     font-family: var(--tipo-principal);
     color: var(--negro);
+    /* line-height: 1.4em; */
     /* opcional */
-    line-height: 1.4em;
+    -webkit-hyphens: auto; /* hace que si se corta una palabra se ponga un guion automaticamente en chrome*/
+    -ms-hyphens: auto; /*igual pero en Edge*/
+    hyphens: auto; 
     /* opcional */
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    /* opcional */
-    font-smooth: always;
+    font-smooth: always; /*reduce bordes dentados y mejora la calidad de las letras*/
     /* opcional */
     -webkit-font-smoothing: antialiased;
     /* opcional */
