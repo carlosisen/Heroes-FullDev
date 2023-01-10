@@ -1,0 +1,30 @@
+.ShowHero-div--background{
+    background-color: rgba(0, 0, 0, 0.523);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.ShowHero-div{
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    top: 30%;
+    bottom: 0;
+    left: 25%;
+    right: 0;
+    border-radius: 3px;
+    background-color: #ebecf0;
+    display: flex;
+    z-index: 2;
+}
+
+.ShowHero-div--form{
+    position: relative;
+    margin-top: 60px;
+    border-radius: 3px;
+    background-color: #525976;
+    display: flex;
+    width: fit-content;
+}

@@ -7,20 +7,20 @@ class reqAPI{
         return resp.data
     }
 
-    // static async postHero(data) {
-    //     const body= JSON.stringify(data)
-    //     return await axios.post(process.env.REACT_APP_BASE_URL, body)
+    static async postHero(data) {
+        const body= data
+        return await axios.post(process.env.REACT_APP_BASE_URL, body)
 
-    // }
+    }
 
-    // static async patchHero({id, ...data}){
-    //     const body= JSON.stringify(data)
-    //     return await axios.patch(`${process.env.REACT_APP_BASE_URL}${id}`, body)
-    // }
+    static async patchHero(id, data){
+        const body= data
+        return await axios.patch(`${process.env.REACT_APP_BASE_URL}${id}`, body)
+    }
 
-    // static async delHero({id}){
-    //     return await axios.delete(`${process.env.REACT_APP_BASE_URL}${id}`)
-    //     }
+    static async delHero(id){
+        return await axios.delete(`${process.env.REACT_APP_BASE_URL}${id}`)
+        }
 }
 
 export default reqAPI
