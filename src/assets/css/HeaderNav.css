@@ -5,7 +5,7 @@
     align-items: center;
     justify-content:left;
     gap: 3em;
-    background: linear-gradient(90deg, rgba(10, 11, 1, 1) 46%, rgba(153, 161, 74, 1) 92%);
+    background: linear-gradient(90deg, rgba(10, 11, 1, 0.8) 46%, rgba(153, 161, 74, 1) 92%);
     min-height: 5em ;
     color:aliceblue
 }
@@ -22,5 +22,7 @@
 }
 .header__logo{
     width: 10%;
-    height: auto;
+}
+img{
+    background-color: transparent;
 }

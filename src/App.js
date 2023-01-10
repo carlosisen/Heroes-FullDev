@@ -4,6 +4,7 @@ import HeaderNav from './components/HeaderNav';
 import MainHeroes from './components/MainHeroes';
 import CreateHero from './components/CreateHero';
 import './assets/css/reset.css';
+import './assets/css/App.css';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
   return (
     <AppWrapper>  
       <div className="App">
+        <div className='App-div--background'></div>
           <HeaderNav/>
           <Routes>
           <Route exact path="/" element={<h1>COSA GORDA</h1>}>

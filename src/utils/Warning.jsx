@@ -1,5 +1,5 @@
-import "../assets/css/Card/Warning.css";
-const WarningAdvise = ({setToggle, title, text, req, content}) => {
+import "../assets/css/Warning.css";
+const Warning = ({setToggle, title, text, req, content}) => {
 
     return (
         <>
@@ -8,7 +8,7 @@ const WarningAdvise = ({setToggle, title, text, req, content}) => {
             <div className="modal__warning__main">
                 <div className="modal__warning__main--titlehead">
                     <span className="modal__warning__main--title">{title}</span>
-                    <span className="modal__warning__main--X"onClick={() => setToggle(false)}> X de cerrar </span>
+                    <span className="modal__warning__main--X"onClick={() => setToggle(false)}> X </span>
                 </div>
                 <div className="modal__warning__main--section ">
                     <p className="modal__warning__section--text " >{text}</p>
@@ -16,7 +16,7 @@ const WarningAdvise = ({setToggle, title, text, req, content}) => {
                         req(content);
                         setToggle(false);
                     }}>
-                        Delete
+                        {title}
                     </button>
                 </div>
 
@@ -29,4 +29,4 @@ const WarningAdvise = ({setToggle, title, text, req, content}) => {
 
 }
 
-export default WarningAdvise
+export default Warning

@@ -60,6 +60,12 @@ const postHero = async (data) => {
     finally { setLoading(false) }
 }
 
+ const reset= ()=> {
+    setData();
+    setLoading();
+    setError()
+ }
+
     return {
         data,
         loading, 
@@ -67,7 +73,8 @@ const postHero = async (data) => {
         getAll, 
         postHero,
         patchHero,
-        delHero
+        delHero,
+        reset
 }
 }
 
