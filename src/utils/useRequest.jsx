@@ -23,50 +23,51 @@ const getAll = async () => {
     }
 }
 
-// const putHero = async (id) => {
-//     setLoading(true)
-//     try {
-//         const resp = await reqAPI.postHero(id)
-//         setAllHeroes([...allHeroes, resp.data])
-//         setData(resp.data)
-//     } catch (error) {
-//         setError(error)
-//     }
-//     finally {setLoading(false)}
+const postHero = async (data) => {
+    setLoading(true)
+    try {
+        const resp = await reqAPI.postHero(data)
+        setAllHeroes([...allHeroes, resp.data.data])
+        setData(resp.data)
+    } catch (error) {
+        setError(error)
+    }
+    finally {setLoading(false)}
 
-// }
+}
 
-//  const patchHero = async ({id, ...data}) => {
-//     setLoading(true)
-//     try {
-//         const resp = await reqAPI.patchHero(id, data)
-//         setAllHeroes(allHeroes.map(hero => hero.id=== id ? resp.data : hero)) // revisar si es mejor llamar a allHeroes aparte y filtrar y sustituir
-//         setData(resp.data)
-//     } catch (error) {
-//         setError(error)
-//     }
-//     finally { setLoading(false) }
-// }
+ const patchHero = async (data) => {
+    setLoading(true)
+    try {
+        const resp = await reqAPI.patchHero(data.id, data)
+        const newHeroes = allHeroes.map(hero => hero.id === data.id ? ({...hero, ...resp.data.data}) : hero)
+        setAllHeroes(newHeroes) // Pendiente hacer funcion para modificar solo los elementos cambiados y no todo el heroe
+        setData(resp.data)
+    } catch (error) {
+        setError(error.message)
+    }
+    finally { setLoading(false) }
+}
 
-//  const delHero = async (id) => {
-//     setLoading(true)
-//     try {
-//         const resp = await reqAPI.postHero(id)
-//         setAllHeroes(allHeroes.filter(prevHeros=> prevHeros.id!== id))
-//     } catch (error) {
-//         setError(error)
-//     }
-//     finally { setLoading(false) }
-// }
+ const delHero = async (id) => {
+    setLoading(true)
+    try {
+        const resp = await reqAPI.delHero(id)
+        setAllHeroes(allHeroes.filter(prevHeros=> prevHeros.id!== id))
+    } catch (error) {
+        setError(error)
+    }
+    finally { setLoading(false) }
+}
 
     return {
         data,
         loading, 
         error,
         getAll, 
-        // putHero,
-        // patchHero,
-        // delHero
+        postHero,
+        patchHero,
+        delHero
 }
 }
 
