@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAppContext } from "../context/context";
 import ShowHero from "./ShowHero";
+import "../assets/css/IndividualHero.css"
 
 const IndividualHero = ({ id }) => {
     const { allHeroes } = useAppContext()
@@ -11,8 +12,8 @@ const IndividualHero = ({ id }) => {
     return (
         <>
             <div onClick={() => setToggle(true)} className="IndividualHero">
-                <img className="img" src={hero.image} alt={hero.characters} style={{ width: "200px" }}></img>
-                <p className="p">{hero.name}</p>
+                <img className="IndividualHero-img" src={hero.image} alt={hero.characters} style={{ width: "200px" }}></img>
+                <p className="IndividualHero-p">{hero.name}</p>
             
                       
             </div>

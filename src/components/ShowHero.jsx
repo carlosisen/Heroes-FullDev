@@ -23,8 +23,7 @@ const ShowHero = ({ id, close }) => {
             <div className="ShowHero-div">
                 <div className="ShowHero-div--form">
                     <FormHero hero={hero} type="Change" opt={{loading, error}} req={patchHero} />
-                    <button onClick={()=> setAdvise(true)}> Delete</button>
-                    {deleteHero.loading&& loading}
+                    <button className="ShowHero-button" onClick={()=> setAdvise(true)}> Delete</button>
                     {advise ? <Warning 
                             setToggle={setAdvise}
                             title="Eliminate"
@@ -34,7 +33,7 @@ const ShowHero = ({ id, close }) => {
                     /> : null}
                     
                 </div>
-                <img className="img" src={hero.image} alt={hero.name}/>
+                {/* <img className="img" src={hero.image} alt={hero.name}/> */}
             </div>
         
         </>

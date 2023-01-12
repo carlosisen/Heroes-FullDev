@@ -1,0 +1,35 @@
+.IndividualHero{
+    position: relative;
+    display: flex;
+    align-items:stretch;
+    justify-content: center;
+    background: black;
+    width: 13em;
+    height: 20em;
+    border: 3px solid black;
+    border-radius: 5px;
+    z-index: 1;
+    cursor: pointer;
+}
+.IndividualHero:hover {
+    transition: transform 1000ms;
+    transform: scale(1.1);
+}
+.IndividualHero-img{
+    object-fit: cover;
+    height: 100%;
+    width:100%;
+    filter: brightness(60%);
+}
+.IndividualHero-p{
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+    color: rgb(39, 41, 174);
+    background: linear-gradient(90deg, rgba(10, 11, 1, 0.8) 46%, rgba(153, 161, 74, 0.7) 92%);
+    text-shadow: 2px 2px 1px rgba(18, 21, 221, 0.286);
+    font-size: clamp(0.8em, 1.2em, 1.4em);
+    font-weight: bolder;
+    font-style: italic;
+    z-index: 1;
+}

@@ -122,6 +122,7 @@ form,
 input,
 textarea,
 select,
+option,
 button,
 label {
     font-family: inherit;

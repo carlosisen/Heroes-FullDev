@@ -1,7 +1,28 @@
 .MainHeroes{
+    margin-top: 2em;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem; 
     justify-content:space-around;
     align-items: center;
+}
+
+.MainHeroes--load{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+
+}
+.MainHeroes-h1{
+    cursor: progress;
+    font-size: clamp(1.5em, 5vw, 15em);
+    font-weight: 900;
+    font-style: oblique;
+    padding: 3rem;
+    background-color: rgba(0, 0, 0, 0.422);
+    color: rgb(16, 16, 144);
+    border: 2px solid rgb(16, 16, 144);
+    border-radius: 10px;
 }

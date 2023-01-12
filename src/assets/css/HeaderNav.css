@@ -1,13 +1,15 @@
 .Header{
+    width:100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content:left;
     gap: 1.5em;
     background: linear-gradient(90deg, rgba(10, 11, 1, 0.8) 46%, rgba(153, 161, 74, 1) 92%);
-    min-height: 10em ;
+    min-height: 5em ;
     height: fit-content;
-    color:aliceblue
+    color:aliceblue;
+    border-bottom: 0.2rem solid rgba(33, 14, 14, 0.801);
 }
 
 .Header-link {
@@ -19,22 +21,22 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 1em;
+    gap: 1em;
 
 }
 .Header-img {
     min-width: 10%;
-    max-width: 20%;
+    max-width: 15%;
 }
 img{
     background-color: transparent;
 }
 
 .Header-h1{
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 600;
 }
 .Header-h4{
-    font-size: 2em;
-        font-weight: 600;
+    font-size: 1.3em;
+    font-weight: 600;
 }
