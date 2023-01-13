@@ -7,7 +7,7 @@
     margin:10px;
 }
 .FormHero-fieldset{
-    width: fit-content;
+    /* width: fit-content; */
 }
 .FormHero-legend{
     color: rgb(26, 124, 32);
@@ -82,20 +82,13 @@
     box-shadow: 3px 3px 1rem rgba(17, 113, 27, 0.644), -3px -3px 1rem rgba(17, 113, 27, 0.644) ;
 }
 
-
-
-/* .FormHero {}
-
-.FormHero-legend {}
-
-.FormHero-div {}
-
-.FormHero-label {}
-
-.FormHero-text {}
-
-.FormHero-select {}
-
-.FormHero-option {}
-
-.FormHero-button {} */
+.FormHero-error{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        margin: 10px;
+        color: red;
+        font-size: 2em;
+}

@@ -1,13 +1,12 @@
 import { useState } from "react"
 import { useAppContext } from "../context/context"
-import axios from "axios"
 import reqAPI from "../services/reqAPI"
 
 const useRequest= () => {
 const [data, setData] = useState(null)
 const [loading, setLoading] = useState(false)
 const [error, setError] = useState(null)
-const {setAllHeroes, allHeroes } = useAppContext()
+const {setAllHeroes, allHeroes, filterHeroes, setFilterHeroes} = useAppContext()
 
 const getAll = async () => {
     setLoading(true)
@@ -54,7 +53,23 @@ const postHero = async (data) => {
     try {
         const resp = await reqAPI.delHero(id)
         setAllHeroes(allHeroes.filter(prevHeros=> prevHeros.id!== id))
+        setFilterHeroes(filterHeroes.filter(prevHeros => prevHeros.id !== id))
     } catch (error) {
+        setError(error)
+    }
+    finally { setLoading(false) }
+}
+
+const searchHero = async (data) =>{
+    setLoading(true)
+    if(data === ""){
+        return setFilterHeroes([])
+    }
+    try {
+        const resp = await reqAPI.searchHero(data)
+        setFilterHeroes(resp.data)
+    } catch (error) {
+        setFilterHeroes(error.message)
         setError(error)
     }
     finally { setLoading(false) }
@@ -74,6 +89,7 @@ const postHero = async (data) => {
         postHero,
         patchHero,
         delHero,
+        searchHero,
         reset
 }
 }

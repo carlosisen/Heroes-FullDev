@@ -3,6 +3,7 @@ import {Routes,Route} from "react-router-dom";
 import HeaderNav from './components/HeaderNav';
 import MainHeroes from './components/MainHeroes';
 import CreateHero from './components/CreateHero';
+import MainSearched from './components/MainSearched';
 import './assets/css/reset.css';
 import './assets/css/App.css';
 
@@ -15,7 +16,7 @@ function App() {
         <div className='App-div--background'></div>
           <HeaderNav/>
           <Routes>
-          <Route exact path="/" element={""}>
+          <Route exact path="/" element={<MainSearched/>}>
           </Route>
           <Route exact path="/marvel" element={<MainHeroes group="Marvel Comics"/>}>  
             </Route>

@@ -26,3 +26,14 @@
     border: 2px solid rgb(16, 16, 144);
     border-radius: 10px;
 }
+
+.MainHeroes--error{
+    background-color: rgba(0, 0, 0, 0.503);
+    padding: 1em;
+    margin:.5em;
+    border-radius: 10px;
+    color:red;
+    font-style: oblique;
+    font-size: 3em;
+    
+}

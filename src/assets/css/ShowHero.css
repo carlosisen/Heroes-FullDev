@@ -9,9 +9,9 @@
 }
 .ShowHero-div{
     height: fit-content;
-    width: fit-content;
+    max-width: fit-content;
     position: fixed;
-    top: 10%;
+    top: 3%;
     border-radius: 3px;
     background-image: url("images/hexagon.jpg");
     display: flex;
@@ -33,7 +33,7 @@
     position: relative;
     border-radius: 3px;
     display: flex;
-    width: fit-content;
+    max-width: fit-content;
     border-radius: 5%;
     box-shadow: 5px 3px 1rem rgba(12, 78, 19, 0.644), -5px -3px 1rem rgba(12, 78, 19, 0.644);
 }

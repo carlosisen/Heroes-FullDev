@@ -21,7 +21,6 @@ const FormHero = ({
 
     const handleChange= (event)=>{
         const {name, value}= event
-        // const newData= {...data , ...newCh}
         setData({...data, [name]:value})
     }
 
@@ -30,17 +29,10 @@ const FormHero = ({
         req(data)
     }
 
-    if(loading){
-        return (
-            <>
-                <h1>IS LOADING...</h1>
-            </>
-        )
-    }
     if (error) {
         return (
             <>
-                <h1>{error}</h1>
+                <h1 className="FormHero-error">{error}</h1>
             </>
         )
         }
@@ -56,7 +48,7 @@ const FormHero = ({
                     </input>
                 </div>
                 <div className="FormHero-div">
-                    <label htmlFor="publisher" className="FormHero-label" >publisher</label>
+                    <label htmlFor="publisher" className="FormHero-label" >Publisher</label>
                     <select name="publisher" value={data.publisher} className="FormHero-select" onChange={
                             (e)=> handleChange(e.target)}>
                         <option value="" className="FormHero-option"></option>
@@ -66,28 +58,28 @@ const FormHero = ({
                     </select>
                 </div>
                 <div className="FormHero-div">
-                    <label htmlFor="alter_ego" className="FormHero-label">alter ego</label>
+                    <label htmlFor="alter_ego" className="FormHero-label">Alter ego</label>
                     <input type="text" name="alter_ego" className="FormHero-text"value={data.alter_ego} onChange={
                             (e)=> handleChange(e.target)}>
 
                     </input>
                 </div>
                 <div className="FormHero-div">
-                    <label htmlFor="first_appearance" className="FormHero-label">first appearance</label>
+                    <label htmlFor="first_appearance" className="FormHero-label">First appearance</label>
                     <input type="text" name="first_appearance" className="FormHero-text" value={data.first_appearance} onChange={
                             (e)=> handleChange(e.target)}>
 
                     </input>
                 </div>
                 <div className="FormHero-div">
-                    <label htmlFor="image" className="FormHero-label">image</label>
+                    <label htmlFor="image" className="FormHero-label">Image</label>
                     <input type="text" name="image" className="FormHero-text" value={data.image} onChange={
                             (e)=> handleChange(e.target)}>
 
                     </input>
                 </div>
                 <div className="FormHero-div">
-                    <label htmlFor="characters" className="FormHero-label">characters</label>
+                    <label htmlFor="characters" className="FormHero-label">Characters</label>
                     <input type="text" name="characters" className="FormHero-text" value={data.characters} onChange={
                             (e)=> handleChange(e.target)}>
 
