@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom"
 import { useEffect, useState} from 'react';
 import useRequest from "../utils/useRequest";
+import SearchHero from "./SearchHero";
 import "../assets/css/HeaderNav.css"
 
 const HeaderNav= ()=> {
@@ -39,6 +40,14 @@ const HeaderNav= ()=> {
                 <Link to="/create" className="Header-link" onClick={() => setLogo("./images/super-hero-logo.png")}>
                     <h4 className="Header-h4">Create Character</h4>
                 </Link>
+                <Link to="/" className=" Header-link Header-link-mainlogo" onClick={() => {
+                        setLogo("./images/heroes.png");
+                        reset();
+                    }}
+                    >
+                        <SearchHero/>
+                </Link>
+              
                 <img src={logo} alt="Logo" className="Header-img"/>
             </div>
             {error && <h1 className="Header-h1">{error}</h1>}

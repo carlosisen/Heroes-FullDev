@@ -13,11 +13,6 @@
     border-bottom: 0.2rem solid rgba(33, 14, 14, 0.801);
 }
 
-/* .Header-title{
-    display: flex;
-    justify-content: space-between;
-} */
-
 .Header-link {
     width:fit-content;
     margin: 0.5em;
@@ -70,7 +65,7 @@
     }
     .Header-main.isActive{
         opacity: 1;
-        height: 13em;
+        height: 18em;
     }
 
 

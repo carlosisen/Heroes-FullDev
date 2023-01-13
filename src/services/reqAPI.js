@@ -21,6 +21,11 @@ class reqAPI{
     static async delHero(id){
         return await axios.delete(`${process.env.REACT_APP_BASE_URL}${id}`)
         }
+    
+    static async searchHero(data) {
+        return await axios.get(`${process.env.REACT_APP_BASE_URL}${data}`)
+    }
+
 }
 
 export default reqAPI
