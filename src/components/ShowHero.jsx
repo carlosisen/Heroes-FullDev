@@ -33,7 +33,6 @@ const ShowHero = ({ id, close }) => {
                     /> : null}
                     
                 </div>
-                {/* <img className="img" src={hero.image} alt={hero.name}/> */}
             </div>
         
         </>
