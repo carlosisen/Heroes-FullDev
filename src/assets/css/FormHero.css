@@ -1,0 +1,101 @@
+.FormHero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:25px;
+    margin:10px;
+}
+.FormHero-fieldset{
+    width: fit-content;
+}
+.FormHero-legend{
+    color: rgb(26, 124, 32);
+    font-size: 2em;
+    font-weight: 900;
+    font-style: oblique;
+    margin: 3px
+}
+.FormHero-div{
+    margin: 2px
+}
+.FormHero-label{
+    color:rgb(95, 158, 110);
+    margin:1px;
+    font-size: 1.6em;
+    font-style: italic;
+    text-shadow: 1px 1px 0.3rem rgba(17, 113, 27, 0.644)
+}
+.FormHero-text{
+    color: rgb(62, 106, 72);
+    padding: 0.2em;
+    margin: 0.2em;
+    font-size: 1.3em;
+    border-radius: 3px;
+
+}
+
+.FormHero-text:focus {
+    background-color: rgba(25, 60, 33, 0.466);
+}
+.FormHero-text:hover{
+    background-color: rgba(18, 44, 24, 0.364);
+}
+
+
+ .FormHero-select{
+    width: 100%;
+    color: rgb(62, 106, 72);
+    padding: 0.2em;
+    margin: 0.2em;
+    font-size: 1.3em;
+    border-radius: 3px;
+}
+.FormHero-select:focus{
+    background-color: rgba(25, 60, 33, 0.511);
+}
+.FormHero-select:hover{
+    background-color: rgba(25, 60, 33, 0.511);
+   
+}
+
+.FormHero-option:hover{
+    color: rgb(62, 106, 72);
+    background: rgba(25, 60, 33, 0.466);
+}
+
+
+.FormHero-button {
+    margin: 1em;
+    color:antiquewhite;
+    width: 7em;
+    height: 2em;
+    background-color: rgba(0, 128, 0, 0.568);
+    border-radius: 5px;
+    box-shadow: 1px 1px 0.3rem rgba(17, 113, 27, 0.644);
+}
+
+.FormHero-button:hover{
+    background-color: rgba(0, 128, 0, 0.719);
+}
+.FormHero-button:active {
+    box-shadow: 3px 3px 1rem rgba(17, 113, 27, 0.644), -3px -3px 1rem rgba(17, 113, 27, 0.644) ;
+}
+
+
+
+/* .FormHero {}
+
+.FormHero-legend {}
+
+.FormHero-div {}
+
+.FormHero-label {}
+
+.FormHero-text {}
+
+.FormHero-select {}
+
+.FormHero-option {}
+
+.FormHero-button {} */

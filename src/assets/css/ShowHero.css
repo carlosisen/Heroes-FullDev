@@ -5,26 +5,53 @@
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 4;
 }
 .ShowHero-div{
-    height: 50%;
-    width: 50%;
+    height: fit-content;
+    width: fit-content;
     position: fixed;
-    top: 30%;
-    bottom: 0;
-    left: 25%;
-    right: 0;
+    top: 10%;
     border-radius: 3px;
-    background-color: #ebecf0;
+    background-image: url("images/hexagon.jpg");
     display: flex;
-    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 2px solid grey;
+    box-shadow: 6px 4px 1rem whitesmoke, -6px -4px 1rem whitesmoke;
+    z-index: 5;
 }
 
 .ShowHero-div--form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.819);
     position: relative;
-    margin-top: 60px;
     border-radius: 3px;
-    background-color: #525976;
     display: flex;
     width: fit-content;
+    border-radius: 5%;
+    box-shadow: 5px 3px 1rem rgba(12, 78, 19, 0.644), -5px -3px 1rem rgba(12, 78, 19, 0.644);
+}
+
+.ShowHero-button{
+    margin-top: -2em;
+    margin-bottom: 1em;
+    color:antiquewhite;
+    width: 7em;
+    height: 2em;
+    background-color: rgba(128, 0, 0, 0.568);
+    border-radius: 5px;
+    box-shadow: 1px 1px 0.3rem rgba(113, 17, 23, 0.644);
+}
+
+.ShowHero-button:hover{
+    background-color: rgba(128, 0, 0, 0.689);
+}
+.ShowHero-button:active {
+    box-shadow: 3px 3px 2rem rgba(120, 24, 31, 0.644), -3px -3px 2rem rgba(116, 26, 32, 0.644);
 }

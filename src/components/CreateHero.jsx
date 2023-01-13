@@ -1,6 +1,6 @@
 import FormHero from "./FormHero";
 import useRequest from "../utils/useRequest";
-import "../assets/css/ShowHero.css"
+import "../assets/css/CreateHero.css"
 import { useState } from "react";
 
 const CreateHero = ({}) => {
@@ -18,16 +18,14 @@ const CreateHero = ({}) => {
 
     return (
         <>
-            <div className="ShowHero-div--background"  onClick={()=> {
+            <div className="CreateHero-div--background"  onClick={()=> {
                 setToggle(false);
                 reset()}}></div>
-            <div className="ShowHero-div">
-                <div className="ShowHero-div--form">
+            <div className="CreateHero-div">
+                <div className="CreateHero-div--form">
                     <FormHero hero={""} type="Create" opt={{ loading, error }} req={postHero} />
-                    {data && <p className="ShowHero-p"> Heroe Creado</p>}
+                    {data && <p className="CreateHero-p"> Heroe Creado</p>}
                 </div>
-
-                <img className="img" src=".\images\space2.jpg" alt="Crea tu heroe" />
             </div>  
 
         </>

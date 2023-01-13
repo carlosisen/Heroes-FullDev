@@ -15,12 +15,14 @@ function App() {
         <div className='App-div--background'></div>
           <HeaderNav/>
           <Routes>
-          <Route exact path="/" element={<h1>COSA GORDA</h1>}>
+          <Route exact path="/" element={""}>
           </Route>
           <Route exact path="/marvel" element={<MainHeroes group="Marvel Comics"/>}>  
             </Route>
           <Route path="/dc" element={<MainHeroes group="DC Comics" />}>
             </Route>
+          <Route path="/others" element={<MainHeroes group="Others" />}>
+          </Route>
           <Route path="/create" element={<CreateHero/>}>
             </Route>
 

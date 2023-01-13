@@ -1,5 +1,5 @@
-import useRequest from "../utils/useRequest";
 import { useState } from "react";
+import "../assets/css/FormHero.css"
 
 const FormHero = ({
      hero: { 
@@ -18,13 +18,11 @@ const FormHero = ({
         characters: characters
     }
     )
-    // const {loading, error, patchHero}= useRequest()
 
-    const handleChange= ({eventName, eventValue})=>{
-        const newCh= {};
-        newCh[eventName]= eventValue
-        const newData= {...data , ...newCh}
-        setData(newData)
+    const handleChange= (event)=>{
+        const {name, value}= event
+        // const newData= {...data , ...newCh}
+        setData({...data, [name]:value})
     }
 
     const handleSubmit=( event )=>{
@@ -47,60 +45,57 @@ const FormHero = ({
         )
         }
     return(
-        <form onSubmit={handleSubmit}>
-            <fieldset>
-                <legend> INFORMATION</legend>
-                <div>
-                    <label htmlFor="name">Name</label>
-                    <input type="text" name="name" value={data.name} required onChange={
-                            (e)=> handleChange({
-                                eventName: e.target.name,
-                                eventValue: e.target.value,
-                            })}></input>
+        <form onSubmit={handleSubmit} className="FormHero">
+            <fieldset className="FormHero-fieldset">
+                <legend className="FormHero-legend"> DATAHERO</legend>
+                <div className="FormHero-div">
+                    <label htmlFor="name" className="FormHero-label">Name</label>
+                    <input type="text" name="name" className="FormHero-text" value={data.name} required onChange={
+                            (e)=> handleChange(e.target)}>
+
+                    </input>
                 </div>
-                <div>
-                    <label htmlFor="publisher">publisher</label>
-                    <input type="text" name="publisher" value={data.publisher} onChange={
-                            (e)=> handleChange({
-                                eventName: e.target.name,
-                                eventValue: e.target.value,
-                            })}></input>
+                <div className="FormHero-div">
+                    <label htmlFor="publisher" className="FormHero-label" >publisher</label>
+                    <select name="publisher" value={data.publisher} className="FormHero-select" onChange={
+                            (e)=> handleChange(e.target)}>
+                        <option value="" className="FormHero-option"></option>
+                        <option value="Others" className="FormHero-option">Others</option>
+                        <option value="DC Comics" className="FormHero-option">DC</option>
+                        <option value="Marvel Comics" className="FormHero-option">Marvel</option>
+                    </select>
                 </div>
-                <div>
-                    <label htmlFor="alter_ego">alter ego</label>
-                    <input type="text" name="alter_ego" value={data.alter_ego} onChange={
-                            (e)=> handleChange({
-                                eventName: e.target.name,
-                                eventValue: e.target.value,
-                            })}></input>
+                <div className="FormHero-div">
+                    <label htmlFor="alter_ego" className="FormHero-label">alter ego</label>
+                    <input type="text" name="alter_ego" className="FormHero-text"value={data.alter_ego} onChange={
+                            (e)=> handleChange(e.target)}>
+
+                    </input>
                 </div>
-                <div>
-                    <label htmlFor="first_appearance">first appearance</label>
-                    <input type="text" name="first_appearance" value={data.first_appearance} onChange={
-                            (e)=> handleChange({
-                                eventName: e.target.name,
-                                eventValue: e.target.value,
-                            })}></input>
+                <div className="FormHero-div">
+                    <label htmlFor="first_appearance" className="FormHero-label">first appearance</label>
+                    <input type="text" name="first_appearance" className="FormHero-text" value={data.first_appearance} onChange={
+                            (e)=> handleChange(e.target)}>
+
+                    </input>
                 </div>
-                <div>
-                    <label htmlFor="image">image</label>
-                    <input type="text" name="image" value={data.image} onChange={
-                            (e)=> handleChange({
-                                eventName: e.target.name,
-                                eventValue: e.target.value,
-                            })}></input>
+                <div className="FormHero-div">
+                    <label htmlFor="image" className="FormHero-label">image</label>
+                    <input type="text" name="image" className="FormHero-text" value={data.image} onChange={
+                            (e)=> handleChange(e.target)}>
+
+                    </input>
                 </div>
-                <div>
-                    <label htmlFor="characters">characters</label>
-                    <input type="text" name="characters" value={data.characters} onChange={
-                            (e)=> handleChange({
-                                eventName: e.target.name,
-                                eventValue: e.target.value,
-                            })}></input>
+                <div className="FormHero-div">
+                    <label htmlFor="characters" className="FormHero-label">characters</label>
+                    <input type="text" name="characters" className="FormHero-text" value={data.characters} onChange={
+                            (e)=> handleChange(e.target)}>
+
+                    </input>
                 </div>
             </fieldset>
             <div>
-                <button type="submit">{type}</button>
+                <button type="submit" className="FormHero-button">{type}</button>
             </div>
 
 
