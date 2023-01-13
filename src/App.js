@@ -4,6 +4,7 @@ import HeaderNav from './components/HeaderNav';
 import MainHeroes from './components/MainHeroes';
 import CreateHero from './components/CreateHero';
 import MainSearched from './components/MainSearched';
+import { Foot } from './components/Foot';
 import './assets/css/reset.css';
 import './assets/css/App.css';
 
@@ -26,8 +27,8 @@ function App() {
           </Route>
           <Route path="/create" element={<CreateHero/>}>
             </Route>
-
         </Routes>
+        <Foot/>
       </div>
     </AppWrapper>
   );
