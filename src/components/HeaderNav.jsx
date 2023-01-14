@@ -26,7 +26,7 @@ const HeaderNav= ()=> {
                 >
                         <h1 className="Header-h1">Heroes</h1>
                 </Link>
-                 <i class="fa-solid fa-bars fa-2xl Header-icon" onClick={()=> setMenu(!menu)}></i>
+                 <i className="fa-solid fa-bars fa-2xl Header-icon" onClick={()=> setMenu(!menu)}></i>
             <div className={`Header-main ${menu && "isActive"}`}>
                 <Link to="/marvel" className="Header-link" onClick={() => setLogo("./images/marvel.png")}>
                     <h4 className="Header-h4">Marvel</h4>

@@ -40,7 +40,7 @@ const postHero = async (data) => {
     try {
         const resp = await reqAPI.patchHero(data.id, data)
         const newHeroes = allHeroes.map(hero => hero.id === data.id ? ({...hero, ...resp.data.data}) : hero)
-        setAllHeroes(newHeroes) // Pendiente hacer funcion para modificar solo los elementos cambiados y no todo el heroe
+        setAllHeroes(newHeroes)
         setData(resp.data)
     } catch (error) {
         setError(error.message)

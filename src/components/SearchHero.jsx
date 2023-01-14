@@ -18,7 +18,7 @@ const SearchHero= ()=>{
         <div className="SearchHero-div"> 
             <form className="SearchHero-form" onSubmit={handleSubmit}>
                 <button type="submit" > 
-                <i class="fa-brands fa-searchengin fa-xl"></i> 
+                <i className="fa-brands fa-searchengin fa-xl"></i> 
                 </button>
                 <input className="SearchHero-input" type="text" placeholder="Search a hero" onChange={
                     e => handleChange(e.target) }>
